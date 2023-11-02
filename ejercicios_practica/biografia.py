@@ -15,12 +15,12 @@ while not last_name.isalpha():
     print("ERROR. Ingrese un apellido valido. Pruebe denuevo.")
     last_name = input("Ingrese su apellido: ").capitalize()
 
-date_pattern = r"^[A-Z][a-z]{2} \d{1,2}, \d{4}$"  # Example: "Jan 1, 1954"
+date_pattern = r"^[a-z]{3} \d{1,2}, \d{4}$"  # Example: "Jan 1, 1954"
 
-date = input("Ingrese su fecha de nacimiento (ejemplo: Jan 1, 1954): ")
-while not re.match(date_pattern, date):
+date = input("Ingrese su fecha de nacimiento (ejemplo: Jan 1, 1954): ").capitalize()
+while not re.match(date_pattern, date, re.I):
     print("ERROR. Ingrese una fecha válida en el formato indicado. Pruebe denuevo.")
-    date = input("Ingrese su fecha de nacimiento: ")
+    date = input("Ingrese su fecha de nacimiento (ejemplo: Jan 1, 1954): ")
     
 address = input("Ingrese su domicilio: ")
 while len(address) < 5: 
