@@ -41,9 +41,8 @@ def list_song_by_artist(artist):
         else:
             print(f"No se encontraron canciones de {artist}.")
 
-# Función principal del programa
 def main():
-    print("Bienvenido, por favor, selecciona una canción de los siguientes artistas:")
+    print("Bienvenido, por favor, seleccione una canción de los siguientes artistas:")
     while True:
         for i, artist in enumerate(songs.keys(), start=1):
             print(f"{i}. {artist}")
